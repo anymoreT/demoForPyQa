@@ -1,0 +1,43 @@
+CrmMysql:
+   Dev:
+      host: "10.18.19.43 "
+      user: ""
+      password: ""
+      db: "wfcrm"
+      port: "3307"
+   Demo:
+      host: "10.18.19.43"
+      user: ""
+      password: ""
+      db: ""
+      port: "3308"  
+      
+WorkflowOracle:
+  Dev:
+     host: "10.18.19.33"
+     user: ""
+     password: ""
+     db: "dbdev2"
+     port: "1521"
+  Demo:
+      host: "10.18.19.32"
+      user: ""
+      password: ""
+      db: "testdb2"
+      port: "1521"          
+      
+ 
+Mongodb:
+  Dev:
+     host: 
+     user: 
+     password: 
+     db:
+     port: 
+  Demo:
+      host: "127.0.0.1"
+      user: "neo"
+      password: "6c7cb51c-2f70-11e5-958a-001f16377cc4"
+      db: "matrix_db"
+      port: "8000"
+     

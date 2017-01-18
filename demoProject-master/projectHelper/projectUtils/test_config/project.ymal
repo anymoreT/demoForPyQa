@@ -1,0 +1,11 @@
+Host:
+    Dev:
+    Demo: "https://www.baidu.com"
+    Pre:  "139.198.2.85:8031"
+
+ 
+Victy:
+   Login:  "/service/index.php/user/login/loginByPhoneNum"
+   Register: "/service/index.php/user/login/loginByPhoneNum"
+   IsRegisterPhoneNum: "/service/index.php/user/Register/IsRegisterPhoneNum"
+   sendCodeByPhoneNum:  "/service/index.php/user/user/sendCodeByPhoneNum"
