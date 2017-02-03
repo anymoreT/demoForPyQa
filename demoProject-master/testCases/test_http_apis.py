@@ -5,6 +5,7 @@ from projectHelper.projectUtils.pUtils  import PUtils
 from pyQa.log.log import Log
 import pdb
 from pyQa.utils.tools import  Tools
+from projectHelper.projectUtils.decorator import  getIdByTestLinkName
 
 
 class TestApis(unittest.TestCase):
@@ -14,6 +15,7 @@ class TestApis(unittest.TestCase):
         self.env = Tools.get_test_suit_env()
 
 
+    @getIdByTestLinkName("手机号码-登录按钮")
     @unittest.skipUnless(Tools.runCaseIn("smoke", "smoke"), "skip case if not in tags")
     def test_TC001(self):
         Log.log_case_desc("Api:/service/index.php/user/login/loginByPhoneNum，响应是200")
