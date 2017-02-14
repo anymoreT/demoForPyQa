@@ -5,3 +5,5 @@ requests==2.9.0
 cx-Oracle
 beautifulsoup4==4.5.1
 pymongo==3.3.0
+TestLink-API-Python-client=0.6.3
+unittest-xml-reporting=2.1.0

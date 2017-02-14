@@ -1,3 +1,7 @@
-TC001:
-  Data:  '{"phoneNum":"13980845431", "pwd":"huang12345"}'
-  Data1:  '{"phoneNum":"13980845421", "pwd":"huang12345"}'
+APP_180:
+  illegal_phone_num:  '{"phoneNum":"013980845431", "pwd":"huang12345"}'
+  wrong_password:  '{"phoneNum":"13980845431", "pwd":"huang123456"}'
+  no_password:  '{"phoneNum":"13980845431", "pwd":""}'
+
+APP_179:
+  right_account:  '{"phoneNum":"13980845431", "pwd":"huang12345"}'

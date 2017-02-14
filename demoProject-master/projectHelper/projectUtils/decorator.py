@@ -1,7 +1,8 @@
 from functools import wraps,partial
 import  pdb
-from . import  testLinkApi
-def getIdByTestLinkName(caseName):
+
+import   unittest
+def RecordResult(caseName):
     if callable(caseName):  # 参数如果是函数，说明装饰器不带参传过来,text是一个函数
         @wraps(caseName)
         def wrapper(*args, **kwargs):
@@ -14,13 +15,15 @@ def getIdByTestLinkName(caseName):
         def decarator(func):
             @wraps(func)
             def warpper(*args, **kwargs):
-                pdb.set_trace()
                 print(testCaseName)
-                testLinkInstance = testLinkApi.TestLink()
-                testLinkInstance.connectTestLink()
-                id = testLinkInstance.get_testCase_id_by_name(testCaseName)
-                f = func(*args, **kwargs)
-                return f  #返还原函数
+                try:
+                   func(*args, **kwargs)
+                finally:
+                    id = args[0].id()
+                    print("++++++++++++++++++++++++++++++++++++++++after result:")
+                    print( id )
+
+
             return warpper
         return decarator
     else:
