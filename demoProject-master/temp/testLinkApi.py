@@ -7,7 +7,12 @@ tls = testlink.TestlinkAPIClient(SERVER_URL, DEVKEY)
 print(tls.about())
 print(tls.getProjects())
 #获取测试计划信息
-tl = tls.getTestPlanByName("3D旅游_APP", "huangyong");
+# tl = tls.getTestPlanByName("3D旅游_APP", "API验证");
+#
+# print("test plan")
+# print(tl)
+# res = tls.getTestCasesForTestPlan(testplanid = int(tl[0]["id"]))
+pdb.set_trace()
 
 #{'name': 'huangyong', 'testproject_id': '7251', 'api_key': 'b7beff6630175696b22c91f7185923cde063477709507eb2c388cf943fa43601', 'is_public': '1', 'id': '24541', 'notes': '<p>\n\t验证脚本修改测试计划结果</p>', 'active': '1', 'is_open': '1'}
 
