@@ -61,7 +61,7 @@ class TestApis(unittest.TestCase):
         http_handle.print_response_python_strcut_body()
         http_handle.response_keys_type_is_right(target_struct={"status": "BOOL", "msg": "STRING", "data":"HASH"})
         http_handle.response_key_value_is_right(target_value={"status":True, "msg":"登录成功"})
-        http_handle.response_keys_type_is_right("data", target_struct={"userID": "INT", "account": "STRING", "imPass":"STRING"})
+        http_handle.response_keys_type_is_right("data", target_struct={"userID": "INT", "account": "STRING", "imPass":"INT"})
 
 
 

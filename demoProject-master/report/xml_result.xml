@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+	<testsuite errors="0" failures="1" name="test_http_apis.TestApis-20170215154730" skipped="0" tests="2" time="0.462">
+		<testcase classname="test_http_apis.TestApis" name="test_APP_180" time="0.242"/>
+		<testcase classname="test_http_apis.TestApis" name="test_APP_179" time="0.220">
+			<failure message="Assert error:Verify..., the type of key imPass is not INT " type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "F:\projects\demoProject-master\demoProject-master\testCases\test_http_apis.py", line 64, in test_APP_179
+    http_handle.response_keys_type_is_right("data", target_struct={"userID": "INT", "account": "STRING", "imPass":"INT"})
+  File "C:\Python34\lib\site-packages\pyQa\httpHander\httpHandler.py", line 366, in response_keys_type_is_right
+    Log.log_error_info("Verify..., the type of key %s is not %s "%(key, value))
+  File "C:\Python34\lib\site-packages\pyQa\log\log.py", line 21, in log_error_info
+    TestCase().fail("Assert error:" + info)
+AssertionError: Assert error:Verify..., the type of key imPass is not INT 
+
+Stdout:
++++++++++setUp
+<_io.StringIO object at 0x00000000023ED708> <DESC_BEGIN>合法用户成功登录appp<DESC_END>
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>发送post请求，请求是:http://139.198.2.85:8031/service/index.php/user/login/loginByPhoneNum<STEP_END>
+2017-02-15 15:47:31:Verify..., status code is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查状态码是:200<STEP_END>
+2017-02-15 15:47:31:{'data': {'identityNo': '', 'avatar': 'https://pek3a.qingstor.com/resource/portrait/v1/headportrait_icon_01.png', 'token2': 'cdbb09d0ed1711306be85b89c84570a1726b5342', 'roleCfg': '{"sex":0,"avatars":[{"wearpos":"02","resname":"0102_0104","icon":"0102_0104","itemid":"0102_0104","sex":"01"},{"wearpos":"04","resname":"0104_0208","icon":"0104_0208","itemid":"0104_0208","sex":"01"},{"wearpos":"05","resname":"0105_0209","icon":"0105_0209","itemid":"0105_0209","sex":"01"},{"wearpos":"06","resname":"0106_0201","icon":"0106_0201","itemid":"0106_0201","sex":"01"}],"dna":null,"skin":{"R":1,"G":1,"B":1}}', 'userID': 20, 'email': '', 'job': '', 'loginIp': '118.112.59.15', 'token': 'MDT3M752OAD3A14BNED6U506M7zAF4fEb2E410W6Q5X9o033RD08xCtCd8lE86x2N8D4g83CMET5Q303OEDCU01B', 'imPass': 'cc242a6623cd4691c4f2086f26657010089fa969', 'birth': '1970-01-01', 'imID': 'jhqc_20@jhqc.platform.com', 'tag': '', 'gender': '男', 'realName': '', 'account': '13980845431', 'phoneNum': '13980845431', 'nickName': 'jh_20'}, 'status': True, 'msg': '登录成功'}
+
+2017-02-15 15:47:31:Verify..., response deep key type is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构内容符合指定内容<STEP_END>
+2017-02-15 15:47:31:Verify..., response deep key,value  is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构符合指定格式要求，且内容正确<STEP_END>
+2017-02-15 15:47:31:Verify..., the type of key imPass is not INT 
+]]>			</failure>
+		</testcase>
+		<system-out>
+<![CDATA[+++++++++setUp
+<_io.StringIO object at 0x00000000023ED708> <DESC_BEGIN>非法用户不能成功登录app<DESC_END>
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>发送post请求，请求是:http://139.198.2.85:8031/service/index.php/user/login/loginByPhoneNum<STEP_END>
+2017-02-15 15:47:31:Verify..., status code is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查状态码是:200<STEP_END>
+2017-02-15 15:47:31:Verify..., response key,value is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应含有字段:status,值为False<STEP_END>
+2017-02-15 15:47:31:Verify..., response key,value is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应含有字段:data,值为None<STEP_END>
+2017-02-15 15:47:31:Verify..., response deep key type is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构内容符合指定内容<STEP_END>
+2017-02-15 15:47:31:Verify..., response deep key,value  is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构符合指定格式要求，且内容正确<STEP_END>
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>发送post请求，请求是:http://139.198.2.85:8031/service/index.php/user/login/loginByPhoneNum<STEP_END>
+2017-02-15 15:47:31:Verify..., status code is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查状态码是:200<STEP_END>
+2017-02-15 15:47:31:Verify..., response deep key,value  is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构符合指定格式要求，且内容正确<STEP_END>
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>发送post请求，请求是:http://139.198.2.85:8031/service/index.php/user/login/loginByPhoneNum<STEP_END>
+2017-02-15 15:47:31:{"status":false,"msg":"\u5bc6\u7801\u9519\u8bef\uff01\u8bf7\u68c0\u67e5!","data":null}
+
+2017-02-15 15:47:31:{'data': None, 'status': False, 'msg': '密码错误！请检查!'}
+
+2017-02-15 15:47:31:Verify..., status code is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查状态码是:200<STEP_END>
+2017-02-15 15:47:31:Verify..., response deep key,value  is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构符合指定格式要求，且内容正确<STEP_END>
++++++++++setUp
+<_io.StringIO object at 0x00000000023ED708> <DESC_BEGIN>合法用户成功登录appp<DESC_END>
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>发送post请求，请求是:http://139.198.2.85:8031/service/index.php/user/login/loginByPhoneNum<STEP_END>
+2017-02-15 15:47:31:Verify..., status code is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查状态码是:200<STEP_END>
+2017-02-15 15:47:31:{'data': {'identityNo': '', 'avatar': 'https://pek3a.qingstor.com/resource/portrait/v1/headportrait_icon_01.png', 'token2': 'cdbb09d0ed1711306be85b89c84570a1726b5342', 'roleCfg': '{"sex":0,"avatars":[{"wearpos":"02","resname":"0102_0104","icon":"0102_0104","itemid":"0102_0104","sex":"01"},{"wearpos":"04","resname":"0104_0208","icon":"0104_0208","itemid":"0104_0208","sex":"01"},{"wearpos":"05","resname":"0105_0209","icon":"0105_0209","itemid":"0105_0209","sex":"01"},{"wearpos":"06","resname":"0106_0201","icon":"0106_0201","itemid":"0106_0201","sex":"01"}],"dna":null,"skin":{"R":1,"G":1,"B":1}}', 'userID': 20, 'email': '', 'job': '', 'loginIp': '118.112.59.15', 'token': 'MDT3M752OAD3A14BNED6U506M7zAF4fEb2E410W6Q5X9o033RD08xCtCd8lE86x2N8D4g83CMET5Q303OEDCU01B', 'imPass': 'cc242a6623cd4691c4f2086f26657010089fa969', 'birth': '1970-01-01', 'imID': 'jhqc_20@jhqc.platform.com', 'tag': '', 'gender': '男', 'realName': '', 'account': '13980845431', 'phoneNum': '13980845431', 'nickName': 'jh_20'}, 'status': True, 'msg': '登录成功'}
+
+2017-02-15 15:47:31:Verify..., response deep key type is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构内容符合指定内容<STEP_END>
+2017-02-15 15:47:31:Verify..., response deep key,value  is ok.
+
+<_io.StringIO object at 0x00000000023ED708> <STEP_BEGIN>检查响应结构符合指定格式要求，且内容正确<STEP_END>
+2017-02-15 15:47:31:Verify..., the type of key imPass is not INT 
+]]>		</system-out>
+		<system-err>
+<![CDATA[]]>		</system-err>
+	</testsuite>
+</testsuites>
